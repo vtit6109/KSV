@@ -1,2 +1,7 @@
 # KSV
-test pull branch vtit 
+
+# Run
+
+- cd front-end
+- npm i
+- npm start
