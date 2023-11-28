@@ -2,6 +2,6 @@
 
 #Run
 
-cd front-end
-npm i
+cd front-end ->
+npm i ->
 npm start
