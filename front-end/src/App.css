@@ -1,0 +1,7 @@
+.container {
+  @apply mx-auto xl:max-w-[1140px] max-xl:px-2;
+}
+
+body {
+  @apply text-[#353b3f];
+}
