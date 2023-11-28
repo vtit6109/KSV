@@ -1,0 +1,7 @@
+.nav li {
+  @apply text-white font-bold;
+}
+
+.nav li:hover {
+  @apply opacity-80;
+}
