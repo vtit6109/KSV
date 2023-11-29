@@ -1,35 +1,28 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 import logo from '../../assets/logo.svg';
 import { FaAngleDown } from 'react-icons/fa6';
 
 const nav_items = [
   {
-    label: 'Trang chủ',
-    href: '/',
+    label: 'Về chúng tôi',
+    href: '#about',
   },
   {
     label: 'Dịch vụ',
-    href: '/services',
-  },
-  {
-    label: 'Về chúng tôi',
-    href: '/about',
+    href: '#services',
   },
   {
     label: 'Hoạt động',
-    href: '/activities',
+    href: '#activities',
   },
   {
     label: 'Địa chỉ',
-    href: '/locations',
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
+    href: '#footer',
   },
 ];
+
 const Header = () => {
   return (
     <header className=' bg-primary-blue h-20'>
@@ -39,26 +32,64 @@ const Header = () => {
             <img src={logo} alt='' className=' w-[296px]' />
           </Link>
 
-          <nav>
-            <ul className='nav flex items-center gap-5'>
-              {nav_items.map((item, index) => (
-                <li key={index}>
-                  <NavLink to={item.href}>{item.label}</NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <Nav items={nav_items} />
 
           <div className=' flex items-center text-white font-bold'>
-            <p className=' cursor-pointer'>Languages</p>
-            <FaAngleDown />
+            <LanguagesBox />
             <div className=' ml-[10px] px-[9px] py-3 border-2 rounded-[250px]'>
-              Tuyển dụng
+              <Link to='/careers'>Tuyển dụng</Link>
             </div>
           </div>
         </div>
       </div>
     </header>
+  );
+};
+
+const Nav = ({ items }) => {
+  return (
+    <nav className='nav'>
+      {items.map((item, index) => (
+        <p key={index}>
+          <a href={item.href}>
+            {item.label}
+            <span></span>
+          </a>
+        </p>
+      ))}
+      <p>
+        <Link to='/blog'>
+          Blog
+          <span></span>
+        </Link>
+      </p>
+    </nav>
+  );
+};
+
+const LanguagesBox = () => {
+  const languagesBoxRef = useRef();
+
+  const showLanguagesBox = () => {
+    languagesBoxRef.current?.classList.toggle('opacity-100');
+  };
+
+  return (
+    <div
+      className='flex items-center cursor-pointer relative'
+      onClick={showLanguagesBox}
+    >
+      <p>Languages</p>
+      <FaAngleDown />
+      <div ref={languagesBoxRef} className='language-box'>
+        <div>
+          <p className='active'>Việt Nam</p>
+        </div>
+        <div className=' cursor-not-allowed'>
+          <p>English</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
