@@ -36,9 +36,13 @@ const Header = () => {
 
           <div className=' flex items-center text-white font-bold'>
             <LanguagesBox />
-            <div className=' ml-[10px] px-[9px] py-3 border-2 rounded-[250px]'>
-              <Link to='/careers'>Tuyển dụng</Link>
-            </div>
+
+            <Link
+              to='/careers'
+              className=' ml-2.5 px-2 py-3 border-2 rounded-[250px] block hover:bg-cyan-600 transition-all'
+            >
+              Tuyển dụng
+            </Link>
           </div>
         </div>
       </div>
@@ -71,7 +75,9 @@ const LanguagesBox = () => {
   const languagesBoxRef = useRef();
 
   const showLanguagesBox = () => {
-    languagesBoxRef.current?.classList.toggle('opacity-100');
+    languagesBoxRef.current?.classList.toggle('show');
+    let icon = document.getElementById('angle-down-icon');
+    icon.classList.toggle('rotate-180');
   };
 
   return (
@@ -80,10 +86,10 @@ const LanguagesBox = () => {
       onClick={showLanguagesBox}
     >
       <p>Languages</p>
-      <FaAngleDown />
+      <FaAngleDown id='angle-down-icon' className='transition-all' />
       <div ref={languagesBoxRef} className='language-box'>
-        <div>
-          <p className='active'>Việt Nam</p>
+        <div className='active'>
+          <p>Tiếng Việt</p>
         </div>
         <div className=' cursor-not-allowed'>
           <p>English</p>
