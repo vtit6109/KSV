@@ -5,3 +5,7 @@
 body {
   @apply text-[#353b3f];
 }
+
+* {
+  @apply scroll-smooth;
+}

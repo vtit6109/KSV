@@ -1,7 +1,35 @@
-.nav li {
-  @apply text-white font-bold;
+.nav {
+  @apply flex items-center gap-5
 }
 
-.nav li:hover {
-  @apply opacity-80;
+.nav p a {
+  @apply relative text-white font-bold
+}
+
+.nav p span {
+  @apply border-b w-full block opacity-0 transition-all duration-300 absolute h-2
+}
+
+.nav p:hover span {
+  @apply h-0 opacity-100
+}
+
+.language-box {
+  @apply absolute w-full shadow-md rounded bg-white top-full opacity-0 transition-all overflow-hidden
+}
+
+.language-box div {
+  @apply py-1 pl-1
+}
+
+.language-box p {
+  @apply text-primary-blue transition-all
+}
+
+.language-box p.active {
+  @apply border-b
+}
+
+.language-box div:hover {
+  @apply bg-slate-200
 }
