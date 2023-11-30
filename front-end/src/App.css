@@ -1,5 +1,5 @@
 .container {
-  @apply mx-auto xl:max-w-[1140px] max-xl:px-2;
+  @apply mx-auto xl:!max-w-[1140px] max-xl:px-2;
 }
 
 body {

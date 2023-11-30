@@ -2,15 +2,15 @@
   @apply flex items-center gap-5;
 }
 
-.nav p a {
+.nav .nav__items a {
   @apply relative text-white font-bold;
 }
 
-.nav p span {
+.nav .nav__items span {
   @apply border-b w-full block opacity-0 transition-all duration-300 absolute top-8;
 }
 
-.nav p:hover span {
+.nav .nav__items:hover span {
   @apply top-full opacity-100;
 }
 

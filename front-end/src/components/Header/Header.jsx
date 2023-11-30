@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import logo from '../../assets/logo.svg';
-import { FaAngleDown } from 'react-icons/fa6';
+import { FaCaretDown } from 'react-icons/fa6';
 
 const nav_items = [
   {
@@ -19,7 +19,7 @@ const nav_items = [
   },
   {
     label: 'Địa chỉ',
-    href: '#footer',
+    href: '#locations',
   },
 ];
 
@@ -54,14 +54,14 @@ const Nav = ({ items }) => {
   return (
     <nav className='nav'>
       {items.map((item, index) => (
-        <p key={index}>
+        <p key={index} className='nav__items'>
           <a href={item.href}>
             {item.label}
             <span></span>
           </a>
         </p>
       ))}
-      <p>
+      <p className='nav__items'>
         <Link to='/blog'>
           Blog
           <span></span>
@@ -82,11 +82,11 @@ const LanguagesBox = () => {
 
   return (
     <div
-      className='flex items-center cursor-pointer relative'
+      className='flex items-center cursor-pointer relative select-none'
       onClick={showLanguagesBox}
     >
-      <p>Languages</p>
-      <FaAngleDown id='angle-down-icon' className='transition-all' />
+      <p className='pr-0.5'>Languages</p>
+      <FaCaretDown id='angle-down-icon' className='transition-all' />
       <div ref={languagesBoxRef} className='language-box'>
         <div className='active'>
           <p>Tiếng Việt</p>
