@@ -53,17 +53,19 @@ const Header = () => {
 
 const Nav = ({ items }) => {
   return (
-    <nav className='nav'>
-      {items.map((item, index) => (
-        <div key={index} className='nav__item'>
-          <a href={item.href}>{item.label}</a>
+    <nav>
+      <ul className='nav'>
+        {items.map((item, index) => (
+          <li key={index} className='nav__item'>
+            <a href={item.href}>{item.label}</a>
+            <span></span>
+          </li>
+        ))}
+        <li className='nav__item'>
+          <Link to='/blog'>Blog</Link>
           <span></span>
-        </div>
-      ))}
-      <div className='nav__item'>
-        <Link to='/blog'>Blog</Link>
-        <span></span>
-      </div>
+        </li>
+      </ul>
     </nav>
   );
 };

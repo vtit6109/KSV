@@ -1,5 +1,5 @@
 .language-box {
-  @apply absolute w-full shadow-md rounded bg-white top-full invisible opacity-0 overflow-hidden;
+  @apply absolute w-full shadow-md rounded bg-white top-full invisible opacity-0 overflow-hidden transition-all;
 }
 
 .language-box.show {
