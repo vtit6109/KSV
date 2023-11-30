@@ -1,3 +1,17 @@
-footer nav div {
+footer nav li {
   flex: 1 0 33.33%;
+}
+
+.contact {
+  @apply flex flex-wrap mt-3 gap-3 
+}
+
+.contact__group {
+  width: calc(50% - 12px);
+  @apply text-white flex flex-row gap-2.5 items-start
+}
+
+.contact__group svg {
+  width: 20px;
+  height: 25px;
 }

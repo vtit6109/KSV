@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { FaCaretDown } from 'react-icons/fa6';
-import { IoCaretDownOutline } from 'react-icons/io5';
 import './languagesBox.css';
 
 const LanguagesBox = () => {
