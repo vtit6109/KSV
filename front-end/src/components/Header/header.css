@@ -2,38 +2,18 @@
   @apply flex items-center gap-5;
 }
 
-.nav .nav__items a {
-  @apply relative text-white font-bold;
+.nav .nav__item {
+  @apply relative;
 }
 
-.nav .nav__items span {
-  @apply border-b w-full block opacity-0 transition-all duration-300 absolute top-8;
+.nav .nav__item a {
+  @apply text-white font-bold;
 }
 
-.nav .nav__items:hover span {
-  @apply top-full opacity-100;
+.nav .nav__item span {
+  @apply border-b w-full block opacity-0 invisible transition-all duration-300 absolute top-8;
 }
 
-.language-box {
-  @apply absolute w-full shadow-md rounded bg-white top-full invisible opacity-0 overflow-hidden;
-}
-
-.language-box.show {
-  @apply visible opacity-100;
-}
-
-.language-box div {
-  @apply py-2 pl-1;
-}
-
-.language-box p {
-  @apply text-primary-blue transition-all font-medium;
-}
-
-.language-box div.active {
-  @apply bg-slate-200;
-}
-
-.language-box div:hover {
-  @apply bg-slate-300;
+.nav .nav__item:hover span {
+  @apply top-full opacity-100 visible;
 }

@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+
 import './header.css';
 import logo from '../../assets/logo.svg';
-import { FaCaretDown } from 'react-icons/fa6';
+import LanguagesBox from '../LanguagesBox/LanguagesBox';
 
 const nav_items = [
   {
@@ -54,48 +55,16 @@ const Nav = ({ items }) => {
   return (
     <nav className='nav'>
       {items.map((item, index) => (
-        <p key={index} className='nav__items'>
-          <a href={item.href}>
-            {item.label}
-            <span></span>
-          </a>
-        </p>
-      ))}
-      <p className='nav__items'>
-        <Link to='/blog'>
-          Blog
+        <div key={index} className='nav__item'>
+          <a href={item.href}>{item.label}</a>
           <span></span>
-        </Link>
-      </p>
-    </nav>
-  );
-};
-
-const LanguagesBox = () => {
-  const languagesBoxRef = useRef();
-
-  const showLanguagesBox = () => {
-    languagesBoxRef.current?.classList.toggle('show');
-    let icon = document.getElementById('angle-down-icon');
-    icon.classList.toggle('rotate-180');
-  };
-
-  return (
-    <div
-      className='flex items-center cursor-pointer relative select-none'
-      onClick={showLanguagesBox}
-    >
-      <p className='pr-0.5'>Languages</p>
-      <FaCaretDown id='angle-down-icon' className='transition-all' />
-      <div ref={languagesBoxRef} className='language-box'>
-        <div className='active'>
-          <p>Tiếng Việt</p>
         </div>
-        <div className=' cursor-not-allowed'>
-          <p>English</p>
-        </div>
+      ))}
+      <div className='nav__item'>
+        <Link to='/blog'>Blog</Link>
+        <span></span>
       </div>
-    </div>
+    </nav>
   );
 };
 
