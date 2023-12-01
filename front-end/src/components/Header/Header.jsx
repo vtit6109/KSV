@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import './header.css';
 import logo from '../../assets/logo.svg';
-import LanguagesBox from '../LanguagesBox/LanguagesBox';
 import navItems from '../../assets/data/navItems';
 import Dropdown from '../../shared/Dropdown';
 
