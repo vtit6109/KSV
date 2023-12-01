@@ -3,25 +3,19 @@ import { Link } from 'react-router-dom';
 import { FaLocationDot, FaEnvelope, FaSquareFacebook } from 'react-icons/fa6';
 
 import logo from '../../assets/logo.svg';
-import LanguagesBox from '../LanguagesBox/LanguagesBox';
+import Dropdown from '../../shared/Dropdown.jsx';
 import './footer.css';
+import navItems from '../../assets/data/navItems.js';
 
-const nav_items = [
+const items = [
   {
-    label: 'Về chúng tôi',
-    href: '#about',
+    key: 1,
+    label: 'Tiếng Việt',
   },
   {
-    label: 'Dịch vụ',
-    href: '#services',
-  },
-  {
-    label: 'Hoạt động',
-    href: '#activities',
-  },
-  {
-    label: 'Địa chỉ',
-    href: '#locations',
+    key: 2,
+    label: 'English',
+    disabled: true,
   },
 ];
 
@@ -37,7 +31,7 @@ const Footer = () => {
             <p>Kenstone metal Co., Ltd.</p>
           </div>
           <Nav />
-          <LanguagesBox />
+          <Dropdown content={items}>Languages</Dropdown>
         </section>
 
         <div className='divider'></div>
@@ -57,15 +51,12 @@ const Nav = () => {
         <li>
           <Link to='/'>Trang chủ</Link>
         </li>
-        {nav_items.map((item, index) => (
+        {navItems.map((item, index) => (
           <li key={index}>
             <a href={item.href}>{item.label}</a>
             <span></span>
           </li>
         ))}
-        <li>
-          <Link to='/blog'>Blog</Link>
-        </li>
       </ul>
     </nav>
   );

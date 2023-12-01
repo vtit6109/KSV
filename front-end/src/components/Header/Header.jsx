@@ -4,23 +4,18 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import logo from '../../assets/logo.svg';
 import LanguagesBox from '../LanguagesBox/LanguagesBox';
+import navItems from '../../assets/data/navItems';
+import Dropdown from '../../shared/Dropdown';
 
-const nav_items = [
+const items = [
   {
-    label: 'Về chúng tôi',
-    href: '#about',
+    key: 1,
+    label: 'Tiếng Việt',
   },
   {
-    label: 'Dịch vụ',
-    href: '#services',
-  },
-  {
-    label: 'Hoạt động',
-    href: '#activities',
-  },
-  {
-    label: 'Địa chỉ',
-    href: '#locations',
+    key: 2,
+    label: 'English',
+    disabled: true,
   },
 ];
 
@@ -33,10 +28,10 @@ const Header = () => {
             <img src={logo} alt='' className=' w-[296px]' />
           </Link>
 
-          <Nav items={nav_items} />
+          <Nav />
 
           <div className=' flex items-center text-white font-bold'>
-            <LanguagesBox />
+            <Dropdown content={items}>Languages</Dropdown>
 
             <Link
               to='/careers'
@@ -51,20 +46,16 @@ const Header = () => {
   );
 };
 
-const Nav = ({ items }) => {
+const Nav = () => {
   return (
     <nav>
       <ul className='nav'>
-        {items.map((item, index) => (
+        {navItems.map((item, index) => (
           <li key={index} className='nav__item'>
             <a href={item.href}>{item.label}</a>
             <span></span>
           </li>
         ))}
-        <li className='nav__item'>
-          <Link to='/blog'>Blog</Link>
-          <span></span>
-        </li>
       </ul>
     </nav>
   );
