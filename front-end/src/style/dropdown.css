@@ -1,0 +1,23 @@
+.dropdown-box {
+  @apply absolute w-full shadow-md rounded bg-white top-full invisible opacity-0 overflow-hidden transition-all;
+}
+
+.dropdown-box.show {
+  @apply visible opacity-100;
+}
+
+.dropdown-box button {
+  @apply py-2 text-primary-blue transition-all font-medium w-full;
+}
+
+.dropdown-box button.active {
+  @apply bg-slate-200;
+}
+
+.dropdown-box button:hover {
+  @apply bg-slate-300;
+}
+
+.dropdown-box button:disabled {
+  @apply text-gray-500 cursor-not-allowed hover:bg-transparent;
+}
