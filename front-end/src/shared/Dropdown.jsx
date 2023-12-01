@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { FaCaretDown } from 'react-icons/fa6';
+import PropTypes from 'prop-types';
 import '../style/dropdown.css';
 
 const Dropdown = ({ content, children }) => {
@@ -29,6 +30,11 @@ const Dropdown = ({ content, children }) => {
       </div>
     </div>
   );
+};
+
+Dropdown.propTypes = {
+  content: PropTypes.array,
+  children: PropTypes.string,
 };
 
 export default Dropdown;
