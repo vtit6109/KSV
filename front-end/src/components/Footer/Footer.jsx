@@ -27,9 +27,9 @@ const nav_items = [
 
 const Footer = () => {
   return (
-    <footer id='footer' className=' bg-[#353B3F] h-80'>
+    <footer id='footer' className=' bg-[#353B3F] h-96'>
       <div className='container'>
-        <section className=' pt-10 pb-3 flex justify-between text-white border-b items-start'>
+        <section className='footer__top '>
           <div>
             <Link to='/'>
               <img src={logo} alt='' className=' w-[200px]' />
@@ -40,16 +40,10 @@ const Footer = () => {
           <LanguagesBox />
         </section>
 
-        <section>
-          <Contact />
-        </section>
+        <div className='divider'></div>
 
-        <section className='flex justify-end'>
-          <div className='text-white mt-3'>
-            Copyright © 2020 KENSTONE Metal Co., Ltd. Inc. All rights reserved{' '}
-            <br />
-            <a href='#'>Data privacy statement</a> | <a href='#'>Imprint</a>
-          </div>
+        <section className='footer__bottom'>
+          <Contact />
         </section>
       </div>
     </footer>
@@ -59,7 +53,7 @@ const Footer = () => {
 const Nav = () => {
   return (
     <nav>
-      <ul className='flex flex-wrap font-bold'>
+      <ul className='flex flex-wrap font-bold gap-2'>
         <li>
           <Link to='/'>Trang chủ</Link>
         </li>
@@ -79,58 +73,57 @@ const Nav = () => {
 
 const Contact = () => {
   return (
-    <div className='contact '>
-      <div className='contact__group'>
-        <span>
-          <FaLocationDot />
-        </span>
-        <div>
-          <h4 className=' text-primary-blue font-semibold'>
-            TAIWAN | HEADQUARTER
-          </h4>
+    <>
+      <div className='contact '>
+        <div className='contact__group'>
+          <i>
+            <FaLocationDot />
+          </i>
           <p>
-            Kenstone metal Co., <br /> Ltd. 9, Road 5, Taichung lnd. Park, 407
-            Taichung, Taiwan TEL +886-4-2359 3591 FAX +886-4-2359 3589
+            <b>TAIWAN | HEADQUARTER </b>
+            <br />
+            Kenstone metal Co., Ltd. <br />
+            9, Road 5, Taichung lnd. Park, 407 Taichung, Taiwan <br /> TEL
+            +886-4-2359 3591 FAX +886-4-2359 3589
           </p>
         </div>
-      </div>
-      <div className='contact__group'>
-        <span>
-          <FaLocationDot />
-        </span>
-        <div>
-          <h4 className=' text-primary-blue font-semibold'>VIỆT NAM</h4>
+        <div className='contact__group'>
+          <i>
+            <FaLocationDot />
+          </i>
           <p>
+            <b>VIỆT NAM</b>
+            <br />
             Kenstone Việt Nam <br />
             Nhà máy Số 2, Số 30, Đường N2, KCN Nhơn Trạch 3, Xã Long Thọ, Huyện
-            Nhơn Trạch, Tỉnh Dồng Nai, Việt Nam TEL: (+84) 2512-860-850
+            Nhơn Trạch, Tỉnh Dồng Nai, Việt Nam <br /> TEL: (+84) 2512-860-850
           </p>
         </div>
+        <div className='contact__group '>
+          <i>
+            <FaEnvelope />
+          </i>
+          <a href='mailto:Kenstone@kenstone.com.tw'>Kenstone@kenstone.com.tw</a>
+        </div>
+        <div className='contact__group '>
+          <i>
+            <FaSquareFacebook />
+          </i>
+          <a href='https://www.facebook.com/?locale=vi_VN' target='_blank'>
+            Theo dõi chúng tôi
+          </a>
+        </div>
       </div>
-      <div className='contact__group '>
-        <span>
-          <FaEnvelope />
+
+      <div className='copyright flex justify-end mt-4'>
+        <span className='text-white text-sm '>
+          <p>
+            Copyright © 2020 KENSTONE Metal Co., Ltd. Inc. All rights reserved
+          </p>
+          <a href='#'>Data privacy statement</a> | <a href='#'>Imprint</a>
         </span>
-        <a
-          href='mailto:Kenstone@kenstone.com.tw'
-          className=' text-primary-blue font-semibold'
-        >
-          Kenstone@kenstone.com.tw
-        </a>
       </div>
-      <div className='contact__group '>
-        <span>
-          <FaSquareFacebook />
-        </span>
-        <a
-          href='https://www.facebook.com/?locale=vi_VN'
-          target='_blank'
-          className=' text-primary-blue font-semibold'
-        >
-          Theo dõi chúng tôi
-        </a>
-      </div>
-    </div>
+    </>
   );
 };
 
