@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './header.css';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/kenstoneLogo.svg';
 import navItems from '../../assets/data/navItems';
 import Dropdown from '../../shared/Dropdown';
 
@@ -44,7 +44,7 @@ const Header = () => {
       <div className='container h-full'>
         <div className=' flex items-center justify-between h-full'>
           <Link to='/'>
-            <img src={logo} alt='' className=' w-[296px]' />
+            <img src={logo} alt='' className=' h-16' />
           </Link>
 
           <Nav />
