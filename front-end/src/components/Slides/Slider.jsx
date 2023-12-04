@@ -7,7 +7,7 @@ import slider3 from '../../assets/img/slides/slider3.jpg';
 import slider4 from '../../assets/img/slides/slider4.jpg';
 import slider5 from '../../assets/img/slides/slider5.jpg';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/kenstoneLogo.svg';
 import './slider.css';
 
 const Slider = () => {
@@ -50,11 +50,10 @@ const Slider = () => {
 const SliderItem = ({ imgUrl }) => {
   return (
     <div className='slider__item h-screen relative'>
-      <img className=' bg-cover' src={imgUrl} alt='' />
+      <img className=' bg-contain' src={imgUrl} alt='' />
       <div className=' absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
         <p className='text-white text-[60px]'>Chào mừng đến với</p>
         <img src={logo} className=' mt-9 mb-4 w-[500px]' alt='' />
-        <span>VIỆT NAM</span>
       </div>
     </div>
   );

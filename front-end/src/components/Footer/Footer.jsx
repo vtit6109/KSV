@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLocationDot, FaEnvelope, FaSquareFacebook } from 'react-icons/fa6';
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/kenstoneLogo.svg';
 import Dropdown from '../../shared/Dropdown.jsx';
 import './footer.css';
 import navItems from '../../assets/data/navItems.js';
@@ -28,9 +28,10 @@ const Footer = () => {
             <Link to='/'>
               <img src={logo} alt='' className=' w-[200px]' />
             </Link>
-            <p>Kenstone metal Co., Ltd.</p>
           </div>
+
           <Nav />
+
           <Dropdown content={items}>Languages</Dropdown>
         </section>
 
@@ -74,10 +75,18 @@ const Contact = () => {
             <b>TAIWAN | HEADQUARTER </b>
             <br />
             Kenstone metal Co., Ltd. <br />
-            9, Road 5, Taichung lnd. Park, 407 Taichung, Taiwan <br /> TEL
-            +886-4-2359 3591 FAX +886-4-2359 3589
+            9, Road 5, Taichung lnd. Park, 407 Taichung, Taiwan <br />
+            TEL +886-4-2359 3591 FAX +886-4-2359 3589 <br />
+            <a
+              href='https://www.kenstone.com.tw/web/home/'
+              target='_blank'
+              className=' hover:underline'
+            >
+              Home Page
+            </a>
           </p>
         </div>
+
         <div className='contact__group'>
           <i>
             <FaLocationDot />
@@ -87,9 +96,11 @@ const Contact = () => {
             <br />
             Kenstone Việt Nam <br />
             Nhà máy Số 2, Số 30, Đường N2, KCN Nhơn Trạch 3, Xã Long Thọ, Huyện
-            Nhơn Trạch, Tỉnh Dồng Nai, Việt Nam <br /> TEL: (+84) 2512-860-850
+            Nhơn Trạch, Tỉnh Dồng Nai, Việt Nam <br />
+            TEL: (+84) 2512-860-850
           </p>
         </div>
+
         <div className='contact__group '>
           <i>
             <FaEnvelope />
