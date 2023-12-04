@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
+
+.slider__item {
+    @apply text-white text-4xl font-bold
+}
+
+.slider__item p {
+    font-family: 'Dancing Script', sans-serif, cursive;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './header.css';
@@ -19,8 +19,28 @@ const items = [
 ];
 
 const Header = () => {
+  const headerRef = useRef();
+
+  const stickyHeaderFunc = () => {
+    window.addEventListener('scroll', () => {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        headerRef.current.classList.add('sticky__header');
+      } else {
+        headerRef.current.classList.remove('sticky__header');
+      }
+    });
+  };
+
+  useEffect(() => {
+    stickyHeaderFunc();
+    return window.removeEventListener('scroll', stickyHeaderFunc);
+  });
+
   return (
-    <header className=' bg-primary-blue h-20 fixed left-0 right-0 top-0'>
+    <header id='header' ref={headerRef}>
       <div className='container h-full'>
         <div className=' flex items-center justify-between h-full'>
           <Link to='/'>

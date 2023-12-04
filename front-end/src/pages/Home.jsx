@@ -1,10 +1,14 @@
 import React from 'react';
+import Slider from '../components/Slides/Slider';
 
 const Home = () => {
   return (
-    <div className='container mt-20'>
-      <div className=' h-screen'>Home</div>
-    </div>
+    <>
+      <Slider />
+      <div className='container'>
+        <div>Intro</div>
+      </div>
+    </>
   );
 };
 

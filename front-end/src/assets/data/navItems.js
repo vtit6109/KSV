@@ -5,7 +5,7 @@ const navItems = [
   },
   {
     label: 'Dịch vụ',
-    href: '#services',
+    href: 'https://www.kenstone.com.tw/web/services/',
   },
   {
     label: 'Hoạt động',
@@ -17,7 +17,7 @@ const navItems = [
   },
   {
     label: 'Blog',
-    href: '#blog',
+    href: '#footer',
   },
 ];
 
