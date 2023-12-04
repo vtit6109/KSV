@@ -1,3 +1,7 @@
+#header {
+  @apply transition-all duration-300 h-20 fixed left-0 right-0 top-0 z-50
+}
+
 .nav {
   @apply flex items-center gap-5;
 }
@@ -16,4 +20,8 @@
 
 .nav .nav__item:hover span {
   @apply top-full opacity-100 visible;
+}
+
+.sticky__header {
+  @apply bg-primary-blue sticky top-0 left-0 right-0 shadow-md
 }
