@@ -1,5 +1,5 @@
-import React from 'react';
 import Slider from '../components/Slides/Slider';
+import HotFeeds from '../components/HotFeeds/HotFeeds'
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <div className='container'>
         <div>Intro</div>
       </div>
+      <HotFeeds/>
     </>
   );
 };

@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Carousel, ConfigProvider } from 'antd';
-
 import slider1 from '../../assets/img/slides/slider1.jpg';
 import slider2 from '../../assets/img/slides/slider2.jpg';
 import slider3 from '../../assets/img/slides/slider3.jpg';
@@ -10,11 +9,12 @@ import slider5 from '../../assets/img/slides/slider5.jpg';
 import logo from '../../assets/kenstoneLogo.svg';
 import './slider.css';
 
+
 const Slider = () => {
   // Dùng cho next and prev button -->
   const carouselRef = useRef();
-  const handleNext = () => carouselRef.current.next();
-  const handlePrev = () => carouselRef.current.prev();
+  // const handleNext = () => carouselRef.current.next();
+  // const handlePrev = () => carouselRef.current.prev();
   // <--
 
   const settings = {
