@@ -1,14 +1,13 @@
 import Slider from '../components/Slides/Slider';
-import HotFeeds from '../components/HotFeeds/HotFeeds'
+import HotFeeds from '../components/HotFeeds/HotFeeds';
+import About from '../components/About/About';
 
 const Home = () => {
   return (
     <>
       <Slider />
-      <div className='container'>
-        <div>Intro</div>
-      </div>
-      <HotFeeds/>
+      <About />
+      <HotFeeds />
     </>
   );
 };

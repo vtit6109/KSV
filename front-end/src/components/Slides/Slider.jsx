@@ -9,7 +9,6 @@ import slider5 from '../../assets/img/slides/slider5.jpg';
 import logo from '../../assets/kenstoneLogo.svg';
 import './slider.css';
 
-
 const Slider = () => {
   // Dùng cho next and prev button -->
   const carouselRef = useRef();
@@ -49,7 +48,7 @@ const Slider = () => {
 
 const SliderItem = ({ imgUrl }) => {
   return (
-    <div className='slider__item h-screen relative'>
+    <div className='slider__item '>
       <img className=' bg-contain' src={imgUrl} alt='' />
       <div className=' absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
         <p className='text-white text-[60px]'>Chào mừng đến với</p>
