@@ -4,8 +4,8 @@ import { FaLocationDot, FaEnvelope, FaSquareFacebook } from 'react-icons/fa6';
 
 import logo from '../../assets/kenstoneLogo.svg';
 import Dropdown from '../../shared/Dropdown.jsx';
-import './footer.css';
 import navItems from '../../assets/data/navItems.js';
+import './footer.css';
 
 const items = [
   {
@@ -50,11 +50,15 @@ const Nav = () => {
     <nav>
       <ul className='flex flex-wrap font-bold gap-2'>
         <li>
-          <Link to='/'>Trang chủ</Link>
+          <Link className=' hover:text-primary-blue' to='/'>
+            Trang chủ
+          </Link>
         </li>
         {navItems.map((item, index) => (
           <li key={index}>
-            <a href={item.href}>{item.label}</a>
+            <a className=' hover:text-primary-blue' href={item.href}>
+              {item.label}
+            </a>
             <span></span>
           </li>
         ))}
