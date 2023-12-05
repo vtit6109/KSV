@@ -1,15 +1,13 @@
 const About = () => {
   return (
-    <div className='container'>
-      <div className=' mt-[100px] text-center'>
-        <h2 className=' text-primary-blue text-4xl font-bold mb-3'>
-          Về Kenstone Việt Nam
-        </h2>
-        <p className=' text-primary-blue mb-3 text-xl font-semibold'>
+    <div id='about' className='container'>
+      <div className=' mt-[100px] text-center text-primary-blue text-xl'>
+        <h2 className=' text-4xl font-bold mb-3'>Về Kenstone Việt Nam</h2>
+        <p className=' mb-3 font-semibold'>
           Trong hơn 40 năm phát triển, Kenstone là nhà sản xuất xe đạp và đối
           tác phát triển cho các thương hiệu cao cấp đến từ Bắc Mỹ và Châu Âu
         </p>
-        <p className=' text-xl mb-3 text-[#353B3F]'>
+        <p className=' mb-3 text-primary-black'>
           Mối quan hệ lâu dài với khách hàng cùng với sự phát triển và cải tiến
           không ngừng về dịch vụ và chất lượng đã định hình lên công ty chúng
           tôi. Chúng tôi đã tạo ra hơn một triệu chiếc xe đạp tại các cơ sở sản
@@ -19,7 +17,7 @@ const About = () => {
           đạp điện.
         </p>
         <a
-          className='text-xl text-primary-blue hover:underline'
+          className=' hover:underline'
           href='https://www.kenstone.com.tw/web/about/'
           target='_blank'
         >

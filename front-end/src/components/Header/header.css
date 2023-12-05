@@ -1,5 +1,5 @@
 #header {
-  @apply transition-all duration-300 h-20 fixed left-0 right-0 top-0 z-50
+  @apply transition-all duration-300 h-20 fixed w-full top-0 z-50;
 }
 
 .nav {
@@ -23,5 +23,5 @@
 }
 
 .sticky__header {
-  @apply bg-primary-blue sticky top-0 left-0 right-0 shadow-md
+  @apply bg-primary-blue sticky top-0 left-0 w-full shadow-md;
 }
