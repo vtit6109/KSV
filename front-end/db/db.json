@@ -1,0 +1,80 @@
+{
+    "blogs" : [
+        {
+            "_id" : 1,
+            "title" : "Thiết kế và kỹ thuật",
+            "content" : [
+                {
+                    "type": "text",
+                    "value": "We understand the needs of our clients, some of whom are leading global bike brands."
+                },
+                {
+                    "type": "image",
+                    "value": "https://www.kenstone.com.tw/web/home/services_design.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "We look for the perfect solution in every step of our work in order to make sure that every detail conforms to the customer requirements."
+                }
+            ],
+            "image": "https://www.kenstone.com.tw/web/home/services_design.jpg"
+        },
+        {
+            "_id" : 2,
+            "title" : "Thiết kế và kỹ thuật",
+            "content" : [
+                {
+                    "type": "text",
+                    "value": "We understand the needs of our clients, some of whom are leading global bike brands."
+                },
+                {
+                    "type": "image",
+                    "value": "https://www.kenstone.com.tw/web/home/services_High-End.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "We look for the perfect solution in every step of our work in order to make sure that every detail conforms to the customer requirements."
+                }
+            ],
+            "image": "https://www.kenstone.com.tw/web/home/services_High-End.jpg"
+        },
+        {
+            "_id" : 3,
+            "title" : "Thiết kế và kỹ thuật",
+            "content" : [
+                {
+                    "type": "text",
+                    "value": "We understand the needs of our clients, some of whom are leading global bike brands."
+                },
+                {
+                    "type": "image",
+                    "value": "https://www.kenstone.com.tw/web/home/services_Paintwork.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "We look for the perfect solution in every step of our work in order to make sure that every detail conforms to the customer requirements."
+                }
+            ],
+            "image": "https://www.kenstone.com.tw/web/home/services_Paintwork.jpg"
+        },
+        {
+            "_id" : 4,
+            "title" : "Thiết kế và kỹ thuật",
+            "content" : [
+                {
+                    "type": "text",
+                    "value": "We understand the needs of our clients, some of whom are leading global bike brands."
+                },
+                {
+                    "type": "image",
+                    "value": "https://www.kenstone.com.tw/web/home/services_Supply.jpg"
+                },
+                {
+                    "type": "text",
+                    "value": "We look for the perfect solution in every step of our work in order to make sure that every detail conforms to the customer requirements."
+                }
+            ],
+            "image": "https://www.kenstone.com.tw/web/home/services_Supply.jpg"
+        }
+    ]
+}
