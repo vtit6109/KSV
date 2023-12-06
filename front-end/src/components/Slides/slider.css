@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
 
 .slider__item {
-  @apply text-white text-4xl font-bold h-screen relative;
+  @apply text-white h-screen relative bg-fixed bg-cover bg-center bg-no-repeat;
 }
 
 .slider__item p {
