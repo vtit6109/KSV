@@ -2,8 +2,8 @@ const About = () => {
   return (
     <div id='about' className='container'>
       <div className=' mt-[100px] text-center text-primary-blue text-xl'>
-        <h2 className=' text-4xl font-bold mb-3'>Về Kenstone Việt Nam</h2>
-        <p className=' mb-3 font-semibold'>
+        <h2 className=' text-4xl font-bold'>Về Kenstone Việt Nam</h2>
+        <p className=' my-3 font-semibold'>
           Trong hơn 40 năm phát triển, Kenstone là nhà sản xuất xe đạp và đối
           tác phát triển cho các thương hiệu cao cấp đến từ Bắc Mỹ và Châu Âu
         </p>
