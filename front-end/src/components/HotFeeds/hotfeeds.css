@@ -1,0 +1,52 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay::before,
+  .overlay::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+  }
+  
+  .overlay::before {
+    width: 50%;
+    height: 100%;
+    left: 0;
+  }
+  
+  .overlay::after {
+    width: 100%;
+    height: 50%;
+    top: 0;
+  }
+  
+  .overlay:hover::before {
+    width: 0;
+  }
+  
+  .overlay:hover::after {
+    height: 0;
+  }
+  
+  li {
+    overflow: hidden; 
+  }
+  
+  img {
+    transition: all 0.5s ease;
+    transform: scale(1); 
+  }
+  
+  li:hover img {
+    transform: scale(1.2); 
+  }
+  

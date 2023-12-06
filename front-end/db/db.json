@@ -2,7 +2,7 @@
     "blogs" : [
         {
             "_id" : 1,
-            "title" : "Thiết kế và kỹ thuật",
+            "title" : "Kenstone Việt Nam: Định hình tương lai công nghệ",
             "content" : [
                 {
                     "type": "text",
